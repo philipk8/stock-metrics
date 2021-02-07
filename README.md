@@ -17,4 +17,4 @@ In addition, this project will include:
 
 ### Wireframes 
 
-![wireframe image](http://github.com/philipk8/stock-metrics/blob/main/wireframe.png>raw=true)
+![wireframe image](http://github.com/philipk8/stock-metrics/blob/main/wireframe.png?raw=true)
