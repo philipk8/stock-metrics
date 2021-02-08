@@ -17,4 +17,28 @@ In addition, this project will include:
 
 ### Wireframes 
 
-![wireframe image](http://github.com/philipk8/stock-metrics/blob/main/wireframe.png?raw=true)
+![wireframe image](http://github.com/philipk8/stock-metrics/blob/main/readme_assets/wireframe.png?raw=true)
+
+### Architecture and Technology
+
+Javascript, HTML and SCSS. Chart built by D3.js library. Stock information from IEX Cloud API. 
+
+### Implementation Timeline 
+- Day 1: 
+  - Set up file structure and fix all current node installation issues
+  - Explore IEX Cloud API and ability to get data needed. 
+- Day 2:
+  - Use D3 to render required chart data with metric overlays
+- Day 3: 
+  - Set up search by ticker function
+  - Add check boxes to toggle metric to be displayed 
+- Day 4: 
+  - Add other components on the page like CAGR calculation Benchmarks components
+  - Write and design the About section
+- Day 5: 
+  - Add and adjust CSS and transitions in data display
+
+### Bonus 
+- Ability to overlay multiple stock tickers to compare across different stocks
+- Set up preset set of popular stock names for selection in groups
+  
