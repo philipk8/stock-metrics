@@ -28,15 +28,15 @@ export default (data) => {
   const yScale = d3.scaleLinear().rangeRound([height, 0]);
 
   debugger 
-  
-  // xScale.domain(d3.extent(data, function(d){
-      // return timeConv(d.date)}));
-      yScale.domain(d3.extent(data, function(c){
-          return c.close}));
 
   xScale.domain(d3.extent(data, function(d){
-      return d.date}));
-
+      return timeConv(d.date)}));
+      
+      // xScale.domain(d3.extent(data, function(d){
+      //   return d.date}));
+        
+  yScale.domain(d3.extent(data, function(c){
+        return c.close}));
   
   // yScale.domain([(0), d3.max(slices, function(c) {
   //   return d3.max(c.values, function(d) {
@@ -44,8 +44,15 @@ export default (data) => {
   //       })
 
   // axes 
-  const yaxis = d3.axisLeft().scale(yScale); 
-  const xaxis = d3.axisBottom().scale(xScale);
+  const yaxis = d3.axisLeft()
+    // .ticks(10, "$f")
+    .ticks(10)
+    .scale(yScale); 
+
+  const xaxis = d3.axisBottom()
+    .ticks(d3.timeMonth.every(1))
+    .tickFormat(d3.timeFormat('%b %y'))
+    .scale(xScale);
 
   svg.append("g")
     .attr("class", "axis")
@@ -54,7 +61,28 @@ export default (data) => {
 
   svg.append("g")
     .attr("class", "axis")
-    .call(yaxis);
+    .call(yaxis)
+    .append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("dy", ".75em")
+    .attr("y", 6)
+    .style("text-anchor", "end")
+    .text("Price");
+
+  // lines 
+  const line = d3.line()
+    .x(function(d) { return xScale(d.date); })
+    .y(function(d) { return yScale(d.close); });
+
+  
+  // drawing 
+  const lines = svg.selectAll("lines")
+    // .data(data)
+    // .enter()
+    .append("g");
+
+    lines.append("path")
+    .attr("d", function(d) { return line(data); });
 
   
 
