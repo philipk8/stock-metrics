@@ -13,15 +13,10 @@ app.get('/', (request, res) => {
   res.sendFile(path.join(__dirname, './dist/index.html'))
 })
 
-const apiKey = 'Tpk_aacacbb679254fe1af315378cb8b2d4e'
-const range = '5d'
-
-
-
 // create route to get single book by its isbn
-app.get('/stocks/:ticker', (request, response) => {
+app.get('/stocks/:ticker/chart/:range', (request, response) => {
   // make api call using fetch
-  fetch(`https://sandbox.iexapis.com/stable/stock/${request.params.ticker}/chart/${range}?token=${apiKey}`)
+  fetch(`https://sandbox.iexapis.com/stable/stock/${request.params.ticker}/chart/${request.params.range}?chartCloseOnly=${request.query.closeOnly}&chartInterval=${request.query.interval}&token=${request.query.apiKey}`)
   .then((response) => {
       return response.text();
   }).then((body) => {

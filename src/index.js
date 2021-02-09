@@ -9,8 +9,22 @@ window.addEventListener("DOMContentLoaded", () => {
   // const ticker = 'CVNA'
   // load_data(ticker);
 
+  
+  const apiKey = 'Tpk_aacacbb679254fe1af315378cb8b2d4e'
+
+  const closeOnly = true;
+  let interval = 21;
   let ticker = 'CVNA';
-  axios.get(`/stocks/${ticker}`)
+  let range = '5y';
+  // 5y, 2y, 1y, 6m, 3m
+
+
+  axios.get(`/stocks/${ticker}/chart/${range}`, {params: {
+    apiKey: apiKey,
+    closeOnly: closeOnly,
+    interval: interval 
+    }})
+
   .then((response) => {
       console.log(response); 
   })
