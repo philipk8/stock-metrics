@@ -15,11 +15,11 @@ export default () => {
   ]
 
   
-  const dimUl = document.getElementById("dim-ul"); 
-  const metUl = document.getElementById("met-ul");
+  // const dimUl = document.getElementById("dim-ul"); 
+  // const metUl = document.getElementById("met-ul");
   
-  const dimEle = dimUl.getElementsByClassName('active')[0];
-  const metEle = metUl.getElementsByClassName('active')[0];
+  // const dimEle = dimUl.getElementsByClassName('active')[0];
+  // const metEle = metUl.getElementsByClassName('active')[0];
   
   args.data = data;
 
