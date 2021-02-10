@@ -27,7 +27,7 @@ export default (data) => {
   const xScale = d3.scaleTime().range([0,width]);
   const yScale = d3.scaleLinear().rangeRound([height, 0]);
 
-  debugger 
+  // debugger 
 
   xScale.domain(d3.extent(data, function(d){
       return timeConv(d.date)}));
@@ -71,20 +71,32 @@ export default (data) => {
 
   // lines 
   const line = d3.line()
-    .x(function(d) { return xScale(d.date); })
+    .x(function(d) { return xScale(timeConv(d.date)); })
     .y(function(d) { return yScale(d.close); });
 
-  
+  const dataObj = { values: data }
+  const slices = []
+  slices.push(dataObj)
+
   // drawing 
   const lines = svg.selectAll("lines")
-    // .data(data)
-    // .enter()
+    .data(slices)
+    .enter()
     .append("g");
 
     lines.append("path")
-    .attr("d", function(d) { return line(data); });
+    .attr("d", function(d) { 
+      debugger 
+      return line(d.values); });
 
-  
+  // const lineFunction = d3.line()
+  //   .x(function(d) { return timeConv(d.date);})
+  //   .y(function(d) { return d.close;})
 
+  // const lineGraph = svg.append("path")
+  //   .attr("d", lineFunction(data))
+  //   .attr("stroke", "blue")
+  //   .attr("stroke-width", 2)
+  //   .attr("fill", "none");
 
 };
