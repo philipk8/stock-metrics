@@ -1,10 +1,13 @@
 import getArgs from './get_args'
 import {pricesApi} from './prices_api'
 import chart from './chart'
+import buildList from './build_list'
 
 export default () => {
 
   debugger 
+
+  buildList()
 
   let args = getArgs()
 

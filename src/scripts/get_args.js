@@ -11,18 +11,25 @@ export default () => {
 
   debugger 
 
-  let ticker1 = document.getElementById("myVal").value 
+  const timeUl = document.getElementById("time-ul");
+  const timeEle = timeUl.getElementsByClassName('active')[0];
 
-    console.log(document.getElementById("myVal").value)
+  args.range = timeEle.dataset.field;
+  
+  debugger 
+
+  // let ticker1 = document.getElementById("myVal").value 
+
+  //   console.log(document.getElementById("myVal").value)
   
     debugger 
   
-  function handleClick(event) {
-      console.log(document.getElementById("myVal").value)
+  // function handleClick(event) {
+  //     console.log(document.getElementById("myVal").value)
 
       // draw(document.getElementById("myVal").value)
-      return false;
-  }
+      // return false;
+  // }
 
   // const dimUl = document.getElementById("dim-ul"); 
   // const metUl = document.getElementById("met-ul");
