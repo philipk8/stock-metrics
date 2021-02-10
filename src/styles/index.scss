@@ -1,2 +1,10 @@
 @import "./_reset.scss";
 @import "./chart.scss";
+@import "./navbar.scss";
+
+
+#content {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}

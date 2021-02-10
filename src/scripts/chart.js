@@ -7,7 +7,7 @@ export default (data) => {
   const height = 500;
   const margin = 5;
   const padding = 5;
-  const adj = 30;
+  const adj = 50;
 
   // overall SVG
   const svg = d3.select("div#chart").append("svg")
@@ -16,7 +16,7 @@ export default (data) => {
             + adj + " -"
             + adj + " "
             + (width + adj *3) + " "
-            + (height + adj*3))
+            + (height + adj *3))
       .style("padding", padding)
       .style("margin", margin)
       .classed("svg-content", true);
