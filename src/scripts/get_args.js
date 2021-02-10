@@ -5,11 +5,11 @@ export default () => {
     apiKey: 'Tpk_aacacbb679254fe1af315378cb8b2d4e',
     closeOnly: true,
     interval: null,
-    ticker: 'AAPL',
+    ticker: "AAPL",
     range: '3m'
   }
 
-  debugger 
+  // debugger 
 
   const timeUl = document.getElementById("time-ul");
   const timeEle = timeUl.getElementsByClassName('active')[0];
@@ -18,11 +18,17 @@ export default () => {
   
   debugger 
 
+  const tickerInput = document.getElementById("ticker-input")
+  const tickerVal = tickerInput.value
+
+  args.ticker = tickerVal
+
+  // debugger 
+
   // let ticker1 = document.getElementById("myVal").value 
 
   //   console.log(document.getElementById("myVal").value)
   
-    debugger 
   
   // function handleClick(event) {
   //     console.log(document.getElementById("myVal").value)

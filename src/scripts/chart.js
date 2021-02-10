@@ -2,7 +2,10 @@ import * as d3 from "d3";
 
 export default (data) => {
 
-  // const { data } = args;
+  debugger 
+  
+  d3.select("svg").remove();
+
   const width = 960;
   const height = 500;
   const margin = 5;

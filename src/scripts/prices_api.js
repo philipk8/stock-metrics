@@ -7,15 +7,12 @@ import axios from 'axios';
   
   // const axios = require('axios');
   
+  export const pricesApi = ({ apiKey, closeOnly, interval, ticker, range}) => {
   
-  debugger 
-  
-  export const pricesApi = (args) => {
-  
-  const { apiKey, closeOnly, interval, ticker, range} = args
+  // const { apiKey, closeOnly, interval, ticker, range} = args
 
-  debugger 
-  
+  // debugger 
+
   return axios.get(`/stocks/${ticker}/chart/${range}`, {params: {
   apiKey: apiKey,
   closeOnly: closeOnly,

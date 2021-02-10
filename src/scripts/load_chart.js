@@ -5,21 +5,21 @@ import buildList from './build_list'
 
 export default () => {
 
-  debugger 
-
-  buildList()
+  // debugger 
 
   let args = getArgs()
 
   debugger
 
   pricesApi(args)
-    .then((response) => {chart(response.data)})
+    .then((response) => {
+      debugger 
+      chart(response.data)})
     .catch(function (error) {
       console.log(error);
   });
 
-  debugger 
+  // debugger 
 
   // chart(prices)
 }

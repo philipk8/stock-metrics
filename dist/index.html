@@ -34,9 +34,14 @@
       </div>
       <div id="sidebar">
         <!-- <form name="myform" onSubmit="return handleClick()"> -->
-          <!-- <input name="Submit" type="submit" value="Add to list"> -->
-          <span>Ticker Input</span>
-          <input type="text" id="myVal" placeholder="Search stock ticker&hellip;" onSubmit="return handleClick()">
+          <div id="ticker">
+            <span>Ticker Input</span>
+            <form action="" id='form'>
+            <input type="text" id="ticker-input" value="AAPL">
+            <!-- <button type="submit">Submit form</button> -->
+            </form>
+          </div>
+          <!-- <input type="text" id="myVal" placeholder="Search stock ticker&hellip;" onSubmit="return handleClick()"> -->
         <!-- </form> -->
         <div id="time">
           Time Range
