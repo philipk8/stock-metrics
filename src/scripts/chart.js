@@ -78,6 +78,11 @@ export default (data) => {
   const slices = []
   slices.push(dataObj)
 
+  let id = 0;
+  const ids = function () {
+    return "line-"+id++;
+  }
+
   // drawing 
   const lines = svg.selectAll("lines")
     .data(slices)
@@ -85,9 +90,9 @@ export default (data) => {
     .append("g");
 
     lines.append("path")
+    .attr("class", ids)
     .attr("d", function(d) { 
-      debugger 
-      return line(d.values); });
+      return line(d.values); })
 
   // const lineFunction = d3.line()
   //   .x(function(d) { return timeConv(d.date);})
