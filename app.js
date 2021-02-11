@@ -27,9 +27,8 @@ app.get('/stocks/:ticker/chart/:range', (request, response) => {
 });
 
 app.get('/stock/:ticker/company', (request, response) => {
-  debugger
   // make api call using fetch
-  fetch(`https://sandbox.iexapis.com/stable/stock/${request.params.ticker}/company?token=${request.query.apiKey}`)
+  fetch(`https://sandbox.iexapis.com/stable/stock/${request.params.ticker}/company?filter=companyName,symbol&token=${request.query.apiKey}`)
   .then((response) => {
       return response.text();
   }).then((body) => {

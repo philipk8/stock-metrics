@@ -27,6 +27,15 @@ import axios from 'axios';
   })
   }
 
+  export const metricApi = ({ apiKey, ticker }) => {
+  // const { apiKey, closeOnly, interval, ticker, range} = args
+  // debugger
+  return axios.get(`/stock/${ticker}/advanced-stats`, {params: {
+  apiKey: apiKey,
+  }
+  })
+  }
+
 
 // .then((response) => {
   //   // load_data(response)

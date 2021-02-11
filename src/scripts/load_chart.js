@@ -33,7 +33,7 @@ export default () => {
 
   stockApi(args)
     .then((response) => {
-      // debugger
+      debugger
       company(response.data)})
     .catch(function (error) {
       console.log(error);

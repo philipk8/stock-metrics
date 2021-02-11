@@ -8,7 +8,8 @@ export default () => {
 
 // debugger 
 
-  let times = ["2y", "1y", "6m", "3m"]
+  // let times = ["2y", "1y", "6m", "3m"]
+  let times = ["6m", "3m"]
 
   const timeUl = document.getElementById("time-ul");
 
