@@ -8,18 +8,25 @@ import axios from 'axios';
   // const axios = require('axios');
   
   export const pricesApi = ({ apiKey, closeOnly, interval, ticker, range}) => {
-  
   // const { apiKey, closeOnly, interval, ticker, range} = args
-
-  debugger 
-
   return axios.get(`/stocks/${ticker}/chart/${range}`, {params: {
   apiKey: apiKey,
   closeOnly: closeOnly,
   interval: interval 
-  }})
-
   }
+  })
+  }
+  
+  export const stockApi = ({ apiKey, ticker }) => {
+  // const { apiKey, closeOnly, interval, ticker, range} = args
+  debugger
+  return axios.get(`/stock/${ticker}/company`, {params: {
+  apiKey: apiKey,
+  }
+  })
+  }
+
+
 // .then((response) => {
   //   // load_data(response)
   //   console.log(response);
