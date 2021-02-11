@@ -19,9 +19,15 @@ export default () => {
   debugger 
 
   const tickerInput = document.getElementById("ticker-input")
-  const tickerVal = tickerInput.value
+  let tickerVal = tickerInput.value
 
-  args.ticker = tickerVal
+debugger 
+
+  if (tickerVal === "") {
+    tickerVal = "AAPL"
+  } else {
+    args.ticker = tickerVal
+  }
 
   // debugger 
 

@@ -1,5 +1,5 @@
-import chart from './chart';
-import getArgs from './get_args'
+// import chart from './chart';
+// import getArgs from './get_args'
 
 import axios from 'axios';
 
@@ -11,13 +11,14 @@ import axios from 'axios';
   
   // const { apiKey, closeOnly, interval, ticker, range} = args
 
-  // debugger 
+  debugger 
 
   return axios.get(`/stocks/${ticker}/chart/${range}`, {params: {
   apiKey: apiKey,
   closeOnly: closeOnly,
   interval: interval 
   }})
+
   }
 // .then((response) => {
   //   // load_data(response)

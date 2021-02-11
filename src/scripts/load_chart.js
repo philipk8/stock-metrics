@@ -5,7 +5,7 @@ import buildList from './build_list'
 
 export default () => {
 
-  // debugger 
+  debugger 
 
   let args = getArgs()
 

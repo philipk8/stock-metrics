@@ -13,7 +13,7 @@ debugger
   const timeUl = document.getElementById("time-ul");
 
   times.forEach(time => {
-    debugger 
+    // debugger 
     const timeLi = document.createElement("li");
     timeLi.classList.add("field");
   // debugger 
@@ -44,11 +44,12 @@ debugger
 
   form.addEventListener("submit", e => {
     debugger
+    e.preventDefault();
     const curr_ticker = tickerInput.value
     tickerInput.setAttribute("value", curr_ticker )
     // tickerInput.attr
     load_chart();
     debugger
   })
-  
+
 }
