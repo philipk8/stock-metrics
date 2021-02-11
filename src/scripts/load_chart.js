@@ -6,12 +6,15 @@ import buildList from './build_list'
 
 export default () => {
 
+  debugger 
+
   let args = getArgs()
 
   pricesApi(args)
     .then((response) => {
       chart(response.data)})
     .catch(function (error) {
+      // debugger 
       console.log(error);
   });
 

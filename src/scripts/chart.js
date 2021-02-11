@@ -10,7 +10,7 @@ export default (data) => {
   const height = 500;
   const margin = 5;
   const padding = 5;
-  const adj = 50;
+  const adj = 45;
 
   // debugger 
 
@@ -40,8 +40,12 @@ export default (data) => {
       // xScale.domain(d3.extent(data, function(d){
       //   return d.date}));
         
-  yScale.domain(d3.extent(data, function(c){
-        return c.close}));
+  // yScale.domain(d3.extent(data, function(c){
+  //       return c.close}));
+
+  yScale.domain([d3.min(data, function(d) {
+        return d.close - 5; }), d3.max(data, function(d) {
+        return d.close; })]);
   
   // yScale.domain([(0), d3.max(slices, function(c) {
   //   return d3.max(c.values, function(d) {
@@ -62,7 +66,13 @@ export default (data) => {
   svg.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0," + height + ")")
-    .call(xaxis);
+    .call(xaxis)
+  .selectAll("text")
+    .attr("y", 0)
+    .attr("x", -48)
+    .attr("dy", ".35em")
+    .attr("transform", "rotate(-45)")
+    .style("text-anchor", "start");
 
   svg.append("g")
     .attr("class", "axis")
@@ -103,17 +113,7 @@ export default (data) => {
       .attr("class", ids)
       .attr("d", line(data))
 
-      
-  debugger 
-
-  //  const path = lines2._groups[0][0]
-
-       debugger 
-
     const totalLength = path.node().getTotalLength();
-    // const totalLength = path.getTotalLength();
-
-    debugger 
 
     path
       .attr("stroke-dasharray", totalLength + " " + totalLength)

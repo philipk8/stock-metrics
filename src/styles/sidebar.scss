@@ -1,16 +1,32 @@
 #sidebar {
-    padding-left: 10px;
+    padding-right: 10px;
     height: 500px;
 }
 
-#ticker {
+#ticker span {
   font-family: Montserrat;
+}
+
+#ticker {
+  // border: 1px solid blue;
+  margin-top: 40px
+}
+
+#ticker-input {
+  margin-top: 4px;
+  font-family: Montserrat;
+  font-size: 16px;
+  background-color: lightgrey;
+  width: 123px;
+  border-radius: 3px;
+  padding-left: 3px;
+  margin-left: 4px
 
 }
 
 #time {
   font-family: Montserrat;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .field {
@@ -21,7 +37,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 3px;
-    width: 150px;
+    width: 120px;
     // border: 1px solid black;
 }
 

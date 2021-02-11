@@ -4,11 +4,11 @@ export default (data) => {
 
   // debugger 
   
-  d3.select("text").remove();
+  d3.select(".company-name").remove();
 
   d3.select("#company").append("text")
     .attr("class", "company-name")
-    .text(data.companyName)
+    .text(data.companyName + " " + "(" + data.symbol + ")" )
 
   // const svg = d3.select("div#company").append("svg")
   //   .attr("width", 960)

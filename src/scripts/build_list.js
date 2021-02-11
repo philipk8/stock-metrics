@@ -24,7 +24,7 @@ export default () => {
                     li.classList.remove('active');
                 });
                 e.target.classList.add('active');
-                debugger
+                // debugger
                 // updateChart(getOptions());
                 load_chart();
 
@@ -43,13 +43,13 @@ export default () => {
   const form = document.getElementById('form');
 
   form.addEventListener("submit", e => {
-    debugger
+    // debugger
     e.preventDefault();
     const curr_ticker = tickerInput.value
     tickerInput.setAttribute("value", curr_ticker )
     // tickerInput.attr
     load_chart();
-    debugger
+    // debugger
   })
 
 }

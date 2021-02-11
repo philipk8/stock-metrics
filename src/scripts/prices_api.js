@@ -9,8 +9,9 @@ import axios from 'axios';
   
   export const pricesApi = ({ apiKey, closeOnly, interval, ticker, range}) => {
   // const { apiKey, closeOnly, interval, ticker, range} = args
+// debugger 
   return axios.get(`/stocks/${ticker}/chart/${range}`, {params: {
-  apiKey: apiKey,
+    apiKey: apiKey,
   closeOnly: closeOnly,
   interval: interval 
   }
