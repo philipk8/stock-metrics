@@ -19,7 +19,7 @@ import axios from 'axios';
   
   export const stockApi = ({ apiKey, ticker }) => {
   // const { apiKey, closeOnly, interval, ticker, range} = args
-  debugger
+  // debugger
   return axios.get(`/stock/${ticker}/company`, {params: {
   apiKey: apiKey,
   }

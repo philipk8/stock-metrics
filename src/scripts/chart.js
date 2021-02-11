@@ -15,7 +15,7 @@ export default (data) => {
   // debugger 
 
   // overall SVG
-  const svg = d3.select("div#chart").append("svg")
+  const svg = d3.select("#chart").append("svg")
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "-"
             + adj + " -"
@@ -89,15 +89,39 @@ export default (data) => {
   }
 
   // drawing 
-  const lines = svg.selectAll("lines")
-    .data(slices)
-    .enter()
-    .append("g");
+  // const lines = svg.selectAll("lines")
+  //   .data(slices)
+  //   .enter()
+  //   .append("g");
 
-    lines.append("path")
-    .attr("class", ids)
-    .attr("d", function(d) { 
-      return line(d.values); })
+  //   const lines2 = lines.append("path")
+  //   .attr("class", ids)
+  //   .attr("d", function(d) { 
+  //     return line(d.values); })
+
+    const path = svg.append("path")
+      .attr("class", ids)
+      .attr("d", line(data))
+
+      
+  debugger 
+
+  //  const path = lines2._groups[0][0]
+
+       debugger 
+
+    const totalLength = path.node().getTotalLength();
+    // const totalLength = path.getTotalLength();
+
+    debugger 
+
+    path
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+      .attr("stroke-dashoffset", totalLength)
+      .transition()
+      .duration(2000)
+      // .ease("linear")
+      .attr("stroke-dashoffset", 0);
 
   // const lineFunction = d3.line()
   //   .x(function(d) { return timeConv(d.date);})

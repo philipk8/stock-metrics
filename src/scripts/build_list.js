@@ -6,9 +6,9 @@ export default () => {
 
   
 
-debugger 
+// debugger 
 
-  let times = ["5y", "2y", "1y", "6m", "3m"]
+  let times = ["2y", "1y", "6m", "3m"]
 
   const timeUl = document.getElementById("time-ul");
 
