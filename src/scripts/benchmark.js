@@ -110,8 +110,13 @@ export default (data) => {
   //   .attr("d", function(d) { 
   //     return line(d.values); })
 
+    // const path = svg.append("path")
+    //   .attr("class", ids)
+    //   .attr("d", line(data))
+
     const path = svg.append("path")
       .attr("class", ids)
+      .attr("id", "benchmark")
       .attr("d", line(data))
 
     const totalLength = path.node().getTotalLength();

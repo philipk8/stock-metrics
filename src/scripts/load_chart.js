@@ -12,7 +12,7 @@ export default () => {
   
   let args = getArgs()
   
-  d3.select("svg").remove();
+  d3.selectAll("svg").remove();
   
   debugger 
 

@@ -4,7 +4,7 @@ export default (data) => {
 
   // debugger 
 
-  d3.select("svg").remove();
+  // d3.select("svg").remove();
 
   const width = 960;
   const height = 500;
