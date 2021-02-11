@@ -38,6 +38,18 @@ app.get('/stock/:ticker/company', (request, response) => {
     });
 });
 
+app.get('/stock/:ticker/advanced-stats', (request, response) => {
+  // make api call using fetch
+  fetch(`https://sandbox.iexapis.com/stable/stock/${request.params.ticker}/advanced-stats?filter=companyName,forwardPERatio,priceToSales&token=${request.query.apiKey}`)
+  .then((response) => {
+      return response.text();
+  }).then((body) => {
+      let results = JSON.parse(body)
+      console.log(results)   // logs to server
+      response.send(results) // sends to frontend
+    });
+});
+
 // // create route to get single book by its isbn
 // app.get('/books/:isbn', (request, response) => {
 //   // make api call using fetch

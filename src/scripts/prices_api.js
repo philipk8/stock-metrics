@@ -17,6 +17,17 @@ import axios from 'axios';
   }
   })
   }
+
+  export const benchmarkApi = ({ apiKey, closeOnly, interval, benchmark, range}) => {
+  // const { apiKey, closeOnly, interval, ticker, range} = args
+// debugger 
+  return axios.get(`/stocks/${benchmark}/chart/${range}`, {params: {
+    apiKey: apiKey,
+  closeOnly: closeOnly,
+  interval: interval 
+  }
+  })
+  }
   
   export const stockApi = ({ apiKey, ticker }) => {
   // const { apiKey, closeOnly, interval, ticker, range} = args

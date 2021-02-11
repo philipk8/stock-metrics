@@ -6,6 +6,7 @@ export default () => {
     closeOnly: true,
     interval: null,
     ticker: "AAPL",
+    benchmark: "SPY",
     range: '3m'
   }
 
