@@ -4,7 +4,7 @@ export default (data) => {
 
   // debugger 
 
-  d3.select("svg").remove();
+  // d3.select("svg").remove();
 
   const width = 960;
   const height = 500;
@@ -53,36 +53,37 @@ export default (data) => {
   //       })
 
   // axes 
-  const yaxis = d3.axisLeft()
+  const yaxis = d3.axisRight()
     // .ticks(10, "$f")
     .ticks(10)
-    .scale(yScale); 
+    .scale(yScale);
 
-  const xaxis = d3.axisBottom()
-    .ticks(d3.timeMonth.every(1))
-    .tickFormat(d3.timeFormat('%b %y'))
-    .scale(xScale);
+  // const xaxis = d3.axisBottom()
+  //   .ticks(d3.timeMonth.every(1))
+  //   .tickFormat(d3.timeFormat('%b %y'))
+  //   .scale(xScale);
+
+  // svg.append("g")
+  //   .attr("class", "axis")
+  //   .attr("transform", "translate(0," + height + ")")
+  //   .call(xaxis)
+  // .selectAll("text")
+  //   .attr("y", 0)
+  //   .attr("x", -48)
+  //   .attr("dy", ".35em")
+  //   .attr("transform", "rotate(-90)")
+  //   .style("text-anchor", "start");
 
   svg.append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(0," + height + ")")
-    .call(xaxis)
-  .selectAll("text")
-    .attr("y", 0)
-    .attr("x", -48)
-    .attr("dy", ".35em")
-    .attr("transform", "rotate(-45)")
-    .style("text-anchor", "start");
-
-  svg.append("g")
-    .attr("class", "axis")
+    .attr("transform", "translate(" + width + ", 0)")
     .call(yaxis)
   .append("text")
     .attr("transform", "rotate(-90)")
     .attr("dy", ".75em")
     .attr("y", 6)
     .style("text-anchor", "end")
-    .text("Price");
+    .text("Metric");
 
   // lines 
   const line = d3.line()
