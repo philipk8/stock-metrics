@@ -2,7 +2,7 @@ import * as d3 from "d3";
 
 export default (data) => {
 
-  debugger 
+  // debugger 
 
   d3.select("svg").remove();
 
@@ -12,8 +12,8 @@ export default (data) => {
   const padding = 5;
   const adj = 50;
 
-  debugger 
-  
+  // debugger 
+
   // overall SVG
   const svg = d3.select("div#chart").append("svg")
       .attr("preserveAspectRatio", "xMinYMin meet")

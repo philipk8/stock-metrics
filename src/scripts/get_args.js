@@ -16,12 +16,12 @@ export default () => {
 
   args.range = timeEle.dataset.field;
   
-  debugger 
+  // debugger 
 
   const tickerInput = document.getElementById("ticker-input")
   let tickerVal = tickerInput.value
 
-debugger 
+// debugger 
 
   if (tickerVal === "") {
     tickerVal = "AAPL"
