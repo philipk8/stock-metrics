@@ -1,6 +1,6 @@
 #sidebar {
-    padding-right: 10px;
-    height: 500px;
+    padding-right: 40px;
+    height: 400px;
 }
 
 #ticker span {
@@ -15,8 +15,8 @@
 #ticker-input {
   margin-top: 4px;
   font-family: Montserrat;
-  font-size: 16px;
-  background-color: lightgrey;
+  font-size: 20px;
+  background-color: #EEEEEE;
   width: 123px;
   border-radius: 3px;
   padding-left: 3px;
@@ -25,6 +25,11 @@
 }
 
 #time {
+  font-family: Montserrat;
+  margin-top: 30px;
+}
+
+#benchmark {
   font-family: Montserrat;
   margin-top: 30px;
 }

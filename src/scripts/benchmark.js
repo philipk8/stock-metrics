@@ -16,7 +16,7 @@ export default (data) => {
 
   // overall SVG
   const svg = d3.select("#chart").append("svg")
-      .attr("preserveAspectRatio", "xMinYMin meet")
+      // .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "-"
             + adj + " -"
             + adj + " "
@@ -81,9 +81,12 @@ export default (data) => {
   .append("text")
     .attr("transform", "rotate(-90)")
     .attr("dy", ".75em")
-    .attr("y", 6)
+    .attr("y", 35)
     .style("text-anchor", "end")
-    .text("Metric");
+    .style("fill", "#063970")
+    .style("font-size", "16px")
+    .style("font-weight", "bold")
+    .text("Benchmark");
 
   // lines 
   const line = d3.line()

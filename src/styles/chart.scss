@@ -1,11 +1,22 @@
 .svg-container {
-    border: 1px sold grey;
+    // border: 1px solid grey;
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
-    vertical-align: top;
-    overflow: hidden;
+    // height: 100%;
+    // width: 960px;
+    // height: 500px;
+    // padding-bottom: 100%;
+    // vertical-align: top;
+    // overflow: hidden;
+}
+
+.about {
+  border: 1px solid ;
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  
 }
 
 .svg-content {
@@ -22,6 +33,7 @@
   font-family: Montserrat;
   font-size: 25px;
   font-weight: 600;
+  color: #ed3700
 
 }
 
@@ -50,9 +62,11 @@ font-size: 120%;
 path.line-0 {
 fill: none;
 stroke: #ed3700;
+stroke-width: 2px;
 }
 
 #benchmark {
 fill: none;
 stroke: #063970;
+stroke-width: 0.75px;
 }

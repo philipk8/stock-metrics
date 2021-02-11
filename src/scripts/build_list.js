@@ -38,7 +38,38 @@ export default () => {
   })
   timeUl.firstElementChild.classList.add('active');
 
+  // let times = ["2y", "1y", "6m", "3m"]
+  let benchmarks = ["SPY", "VTI", "VWO" ]
 
+  const benchUl = document.getElementById("benchmark-ul");
+
+  benchmarks.forEach(benchmark => {
+    // debugger 
+    const benchLi = document.createElement("li");
+    benchLi.classList.add("field");
+  // debugger 
+    benchLi.innerHTML = benchmark;
+    benchLi.addEventListener("click", e => {
+            if (!e.target.classList.contains('active')) {
+                Array.from(benchUl.getElementsByClassName('active')).forEach(li => {
+                    li.classList.remove('active');
+                });
+                e.target.classList.add('active');
+                // debugger
+                // updateChart(getOptions());
+                load_chart();
+
+            }
+        });
+    // debugger
+        // timeLi.dataset.fn = 'sum';
+        benchLi.dataset.field = benchmark;
+        benchUl.appendChild(benchLi);
+  })
+  benchUl.firstElementChild.classList.add('active');
+
+
+  // ticker input 
   const tickerInput = document.getElementById("ticker-input")
 
   const form = document.getElementById('form');

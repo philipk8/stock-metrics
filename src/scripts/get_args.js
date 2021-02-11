@@ -5,7 +5,7 @@ export default () => {
     apiKey: 'Tpk_aacacbb679254fe1af315378cb8b2d4e',
     closeOnly: true,
     interval: null,
-    ticker: "AAPL",
+    ticker: "GME",
     benchmark: "SPY",
     range: '3m'
   }
@@ -16,6 +16,13 @@ export default () => {
   const timeEle = timeUl.getElementsByClassName('active')[0];
 
   args.range = timeEle.dataset.field;
+
+  debugger 
+
+  const benchUl = document.getElementById("benchmark-ul");
+  const benchEle = benchUl.getElementsByClassName('active')[0];
+
+  args.benchmark = benchEle.dataset.field;
   
   // debugger 
 
@@ -25,10 +32,12 @@ export default () => {
 // debugger 
 
   if (tickerVal === "") {
-    tickerVal = "AAPL"
+    tickerVal = "GME"
   } else {
     args.ticker = tickerVal
   }
+
+  
 
   // debugger 
 

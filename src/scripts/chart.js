@@ -16,7 +16,7 @@ export default (data) => {
 
   // overall SVG
   const svg = d3.select("#chart").append("svg")
-      .attr("preserveAspectRatio", "xMinYMin meet")
+      // .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "-"
             + adj + " -"
             + adj + " "
@@ -82,7 +82,10 @@ export default (data) => {
     .attr("dy", ".75em")
     .attr("y", 6)
     .style("text-anchor", "end")
-    .text("Price");
+    .style("fill", "#ed3700")
+    .style("font-size", "16px")
+    .style("font-weight", "bold")
+    .text("Stock Price");
 
   // lines 
   const line = d3.line()

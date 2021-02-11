@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //   apiKey: 'Tpk_aacacbb679254fe1af315378cb8b2d4e',
   //   closeOnly: true,
   //   interval: null,
-  //   ticker: 'AAPL',
+  //   ticker: 'GME',
   //   range: '3m'
   // }
 
