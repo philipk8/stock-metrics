@@ -100,3 +100,37 @@ fill: none;
 stroke: #063970;
 stroke-width: 0.75px;
 }
+
+// .tooltip {
+// fill: #2b2929;
+// font-family: Georgia;
+// font-size: 150%;
+// }
+
+// /* POINTS */
+// .point {
+// stroke: none;
+// fill: #9c9c9c;
+// }
+
+.overlay {
+        fill: none;
+        pointer-events: all;
+    }
+
+.focus circle {
+    fill: steelblue;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+.tooltip-date, .tooltip-price {
+    font-weight: bold;
+}

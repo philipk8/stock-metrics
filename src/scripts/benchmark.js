@@ -117,6 +117,16 @@ export default (data) => {
     //   .attr("class", ids)
     //   .attr("d", line(data))
 
+    // let tooltip;
+    // if (document.getElementById('tooltip')) {
+    //     tooltip = d3.select('#tooltip');
+    // } else {
+    //     tooltip = d3.select("body").append('div')
+    //         .attr('id', 'tooltip')
+    //         .attr('class', 'tooltip')
+    //         .style('opacity', 0);
+    // }
+
     const path = svg.append("path")
       .attr("class", ids)
       .attr("id", "benchmark")
@@ -131,6 +141,96 @@ export default (data) => {
       .duration(2000)
       // .ease("linear")
       .attr("stroke-dashoffset", 0);
+
+
+      debugger 
+
+      
+
+      // // tooltip
+      //   const focus = svg.append("g")
+      //       .attr("class", "focus")
+      //       .style("display", "none");
+
+      //   debugger 
+
+      //   focus.append("circle")
+      //       .attr("r", 5);
+
+      //   debugger 
+
+      //   focus.append("rect")
+      //       .attr("class", "tooltip")
+      //       .attr("width", 100)
+      //       .attr("height", 50)
+      //       .attr("x", 10)
+      //       .attr("y", -22)
+      //       .attr("rx", 4)
+      //       .attr("ry", 4);
+
+      //     debugger 
+
+      //   focus.append("text")
+      //       .attr("class", "tooltip-date")
+      //       .attr("x", 18)
+      //       .attr("y", -2);
+
+      //   focus.append("text")
+      //       .attr("x", 18)
+      //       .attr("y", 18)
+      //       .text("Price:");
+
+      //       debugger 
+
+      //   focus.append("text")
+      //       .attr("class", "tooltip-price")
+      //       .attr("x", 60)
+      //       .attr("y", 18);
+
+      //       debugger 
+
+      //   svg.append("rect")
+      //       .attr("class", "overlay")
+      //       .attr("width", width)
+      //       .attr("height", height)
+      //       .on("mouseover", function() { focus.style("display", null); })
+      //       .on("mouseout", function() { focus.style("display", "none"); })
+      //       .on("mousemove", mousemove);
+
+      //   // const timeConv = d3.timeParse("%Y-%m-%d");
+
+      //   const data2 = data.map( (d) => {
+      //     return {
+      //       date0: d.date, // '2020-12-01'
+      //       date: timeConv(d.date), // 'UTC 
+      //       close: d.close
+      //     }
+      //   })
+        
+      //   // debugger
+
+      //   function mousemove() {
+      //     // debugger
+      //     let bisectDate = d3.bisector(function(d) { return d.date; }).left
+      //     // debugger
+      //       // var xx = event.pageX
+      //       // var x0 = xScale.invert(xx)
+      //       let x0 = xScale.invert(d3.pointer(event,this)[0])
+      //       // debugger 
+      //          let i = bisectDate(data2, x0, 1)
+      //         //  debugger 
+      //           let d0 = data2[i - 1],
+      //           d1 = data2[i],
+      //           d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+      //     debugger 
+      //       focus.attr("transform", "translate(" + xScale(timeConv(d.date0)) + "," + yScale(d.close) + ")");
+      //     debugger
+      //       focus.select(".tooltip-date").text(d.date0);
+      //     debugger
+      //       focus.select(".tooltip-price").text(d.close);
+      //     debugger 
+      //   }
+    
 
   // const lineFunction = d3.line()
   //   .x(function(d) { return timeConv(d.date);})

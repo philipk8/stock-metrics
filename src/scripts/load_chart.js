@@ -22,7 +22,6 @@ export default () => {
 
   benchmarkApi(args)
     .then((response) => {
-      debugger 
       benchmark(response.data)})
     .catch(function (error) {
       // debugger 
@@ -32,7 +31,6 @@ export default () => {
 
   stockApi(args)
     .then((response) => {
-      debugger
       company(response.data)})
     .catch(function (error) {
       console.log(error);
