@@ -2,8 +2,6 @@ import * as d3 from "d3";
 
 export default (data) => {
 
-  // debugger 
-
   // d3.select("svg").remove();
 
   const width = 960;
@@ -12,7 +10,6 @@ export default (data) => {
   const padding = 5;
   const adj = 45;
 
-  // debugger 
 
   // overall SVG
   const svg = d3.select("#chart").append("svg")

@@ -1,8 +1,5 @@
 // src/index.js
 import "./styles/index.scss";
-import load_data from './scripts/load_data';
-import chart from './scripts/chart';
-import prices_api from "./scripts/prices_api";
 import loadChart from "./scripts/load_chart"
 import buildList from "./scripts/build_list"
 

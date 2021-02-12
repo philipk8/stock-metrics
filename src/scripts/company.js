@@ -2,7 +2,6 @@ import * as d3 from "d3";
 
 export default (data) => {
 
-  // debugger 
   
   d3.select(".company-name").remove();
 
