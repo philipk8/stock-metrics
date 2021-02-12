@@ -5,12 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <link rel="icon" type="image/ico" href="./stock-metrics-logo.png">
+
   <link rel="stylesheet" href="./main.css" />
   <title>Stock Metrics</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
 </head>
 
@@ -24,10 +28,34 @@
         
       </div>
       <div id="navbar-right">
-  
+          <span>
+            <a href="https://github.com/philipk8" target="_blank" rel="noopener noreferrer" class="navlinks fab fa-github"></a>
+          </span>
       </div>
     </div>
 
+    <div class="about">
+      <span>About</span>
+      <br>
+      <br>
+        Welcome to Stock Metrics! Please enter any valid(!) stock ticker into the search bar, and see the price chart
+          compared to a benchmark! We start with a 2 year price chart compared to the S&P500 Index ETF, but you may
+          select other time frames and benchmarks.
+          <br/>
+          <br/>
+          To mark the times (Feb 2021), we have loaded Gamestop as the default stock to chart. Diamond Hands!
+          <br />
+          <br />
+          Our benchmarks used are SPY: 
+          <a href="https://www.ssga.com/us/en/institutional/etfs/funds/spdr-sp-500-etf-trust-spy">SPDR S&P 500 ETF Trust</a>
+          , VTI:
+          <a href="https://investor.vanguard.com/etf/profile/VTI">Vanguard Total Stock Market Index Fund ETF Shares</a>
+          , and VWO:
+          <a href="https://investor.vanguard.com/etf/profile/VWO">Vanguard FTSE Emerging Markets Index Fund ETF Shares</a>
+      </div>
+        
+    
+      
 
       <div id="company" class="company-class">
       </div>
@@ -45,29 +73,29 @@
       
       <div id="sidebar">
         <div id="ticker">
-          <span>Search Ticker</span>
+          <span>Search Ticker:</span>
           <form action="" id='form'>
           <input type="text" id="ticker-input" value="GME" >
           </form>
         </div>
         
         <div id="time">
-          Date Range
+          Date Range:
         <ul id="time-ul"></ul>
         </div>
         
         <div id="benchmark">
-          Benchmark
+          Benchmark:
         <ul id="benchmark-ul"></ul>
         </div>
+
+        
 
       </div>
 
     </div>
 
-    <div class="about">
-      About
-    </div>
+    
 
   </div>
 </body>

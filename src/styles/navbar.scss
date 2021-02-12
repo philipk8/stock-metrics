@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 25px;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     color: #eeeeee;
     background-color:#063970;
 }
@@ -12,4 +12,16 @@
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
+    padding-left: 57px;
+}
+
+.navlinks {
+    font-size: 25px;
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#navbar-right {
+  width: 210px
 }
