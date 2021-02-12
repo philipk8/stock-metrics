@@ -1,7 +1,7 @@
-@import "./_reset.scss";
-@import "./chart.scss";
-@import "./navbar.scss";
-@import "./sidebar.scss";
+@import "./_reset.css";
+@import "./chart.css";
+@import "./navbar.css";
+@import "./sidebar.css";
 
 
 #content {
