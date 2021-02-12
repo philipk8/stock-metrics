@@ -138,12 +138,8 @@ export default (data) => {
             .attr("class", "focus")
             .style("display", "none");
 
-        debugger 
-
         focus.append("circle")
             .attr("r", 5);
-
-        debugger 
 
         focus.append("rect")
             .attr("class", "tooltip")
@@ -153,8 +149,6 @@ export default (data) => {
             .attr("y", -22)
             .attr("rx", 4)
             .attr("ry", 4);
-
-          debugger 
 
         focus.append("text")
             .attr("class", "tooltip-date")
@@ -166,14 +160,10 @@ export default (data) => {
             .attr("y", 18)
             .text("Price:");
 
-            debugger 
-
         focus.append("text")
             .attr("class", "tooltip-price")
             .attr("x", 60)
             .attr("y", 18);
-
-            debugger 
 
         svg.append("rect")
             .attr("class", "overlay")
@@ -193,6 +183,7 @@ export default (data) => {
           }
         })
         
+        // var formatValue = d3.format("$.,2f")
         // debugger
 
         function mousemove() {
@@ -208,13 +199,9 @@ export default (data) => {
                 let d0 = data2[i - 1],
                 d1 = data2[i],
                 d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-          debugger 
             focus.attr("transform", "translate(" + xScale(timeConv(d.date0)) + "," + yScale(d.close) + ")");
-          debugger
             focus.select(".tooltip-date").text(d.date0);
-          debugger
             focus.select(".tooltip-price").text(d.close);
-          debugger 
         }
 
 };
