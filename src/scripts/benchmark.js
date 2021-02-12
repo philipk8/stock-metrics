@@ -143,7 +143,7 @@ export default (data) => {
       .attr("stroke-dashoffset", 0);
 
 
-      debugger 
+      // debugger 
 
       
 

@@ -11,14 +11,6 @@ export default () => {
   let args = getArgs()
   
   d3.selectAll("svg").remove();
-  
-  pricesApi(args)
-    .then((response) => {
-      chart(response.data)})
-    .catch(function (error) {
-      // debugger 
-      console.log(error);
-  });
 
   benchmarkApi(args)
     .then((response) => {
@@ -27,6 +19,15 @@ export default () => {
       // debugger 
       console.log(error);
   });
+
+  pricesApi(args)
+    .then((response) => {
+      chart(response.data)})
+    .catch(function (error) {
+      // debugger 
+      console.log(error);
+  });
+
 
 
   stockApi(args)
