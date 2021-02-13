@@ -2,7 +2,7 @@
 export default () => {
 
   const args = {
-    apiKey: 'Tpk_aacacbb679254fe1af315378cb8b2d4e',
+    // apiKey: 'Tpk_aacacbb679254fe1af315378cb8b2d4e',
     closeOnly: true,
     interval: null,
     ticker: "GME",

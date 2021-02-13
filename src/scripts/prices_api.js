@@ -7,22 +7,20 @@ import axios from 'axios';
   
   // const axios = require('axios');
   
-  export const pricesApi = ({ apiKey, closeOnly, interval, ticker, range}) => {
+  export const pricesApi = ({ closeOnly, interval, ticker, range}) => {
   // const { apiKey, closeOnly, interval, ticker, range} = args
 // debugger 
   return axios.get(`/stocks/${ticker}/chart/${range}`, {params: {
-    apiKey: apiKey,
   closeOnly: closeOnly,
   interval: interval 
   }
   })
   }
 
-  export const benchmarkApi = ({ apiKey, closeOnly, interval, benchmark, range}) => {
+  export const benchmarkApi = ({ closeOnly, interval, benchmark, range}) => {
   // const { apiKey, closeOnly, interval, ticker, range} = args
 // debugger 
   return axios.get(`/stocks/${benchmark}/chart/${range}`, {params: {
-    apiKey: apiKey,
   closeOnly: closeOnly,
   interval: interval 
   }
@@ -33,7 +31,6 @@ import axios from 'axios';
   // const { apiKey, closeOnly, interval, ticker, range} = args
   // debugger
   return axios.get(`/stock/${ticker}/company`, {params: {
-  apiKey: apiKey,
   }
   })
   }
