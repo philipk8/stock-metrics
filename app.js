@@ -2,10 +2,12 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const fetch = require('node-fetch')
+
+require("dotenv").config()
+
 const PORT = process.env.PORT || 8000; // process.env accesses heroku's environment variables
 // const PORT = process.env.PORT || 8080; // process.env accesses heroku's environment variables
 
-require("dotenv").config()
 
 // app.use(express.static('public'))
 app.use(express.static('dist'))
