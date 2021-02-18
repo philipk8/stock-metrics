@@ -23,7 +23,17 @@
   line-height: 120%
 }
 .about:hover {
-  height: 180px;
+  height: 195px;
+}
+
+.about-header {
+  display:flex;
+  align-items: flex-end;
+}
+
+.dropdown-arrow {
+  height: 15px;
+  margin-left: 5px;
 }
 
 .about span {
