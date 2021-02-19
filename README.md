@@ -2,6 +2,8 @@
 
 Stock metrics is a data visualization application for displaying stock price charts over different timeframes. Various equity indices benchmarks may be overlayed for comparison.
 
+[Live Site](https://stock-metrics-js.herokuapp.com/)
+
 ![show image](http://github.com/philipk8/stock-metrics/blob/main/readme_assets/stock-metrics-show.png?raw=true)
 
 ### Features
